@@ -1,0 +1,109 @@
+/* =========================================================
+   SOULTECH.AI — EXECUTIVE DESIGN SYSTEM (Linear / Vercel Inspired)
+========================================================= */
+
+:root {
+  --bg-main: #fafafa;
+  --bg-card: #ffffff;
+  --bg-tabs: #f4f4f5;
+  --bg-input: #ffffff;
+  --bg-radio-active: #eff6ff;
+
+  --text-main: #3f3f46;
+  --text-strong: #09090b;
+  --text-muted: #71717a;
+
+  --border-color: #e4e4e7;
+  --shadow-sm: 0 1px 2px 0 rgba(9, 9, 11, 0.03);
+  --shadow-md: 0 8px 24px -4px rgba(9, 9, 11, 0.06);
+
+  --primary-color: #09090b;
+  --accent-color: #2563eb;
+}
+
+body.dark {
+  --bg-main: #09090b;
+  --bg-card: #121215;
+  --bg-tabs: #18181b;
+  --bg-input: #09090b;
+  --bg-radio-active: rgba(37, 99, 235, 0.15);
+
+  --text-main: #a1a1aa;
+  --text-strong: #fafafa;
+  --text-muted: #71717a;
+
+  --border-color: #27272a;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
+
+  --primary-color: #2563eb;
+  --accent-color: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar minimalista */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Animações suaves */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Responsividade do Calendário */
+.calendario-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 800px) {
+  .calendario-container .rbc-calendar {
+    min-width: 760px;
+  }
+}
