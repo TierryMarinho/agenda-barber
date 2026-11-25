@@ -484,7 +484,7 @@ export default function Financeiro({ empresaId }) {
         </div>
       </div>
 
-      {/* --- MODAL EDITAR DESPESA --- */}
+      {/* MODAL EDITAR DESPESA */}
       {isModalEditOpen && despesaEditando && (
         <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-sm p-6 shadow-xl">
@@ -537,7 +537,7 @@ export default function Financeiro({ empresaId }) {
         </div>
       )}
 
-      {/* --- MODAL EXCLUIR DESPESA --- */}
+      {/* MODAL EXCLUIR DESPESA */}
       {isModalDeleteOpen && despesaExcluindo && (
         <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-sm p-6 text-center shadow-xl">

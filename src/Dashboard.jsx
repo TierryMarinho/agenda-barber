@@ -79,7 +79,7 @@ export default function Dashboard({ empresa, onNavigate }) {
   return (
     <div className="space-y-6 animate-fade-in">
 
-      {/* ─── CARDS DE PERFORMANCE EXECUTIVA (4 KPIs) ───────────── */}
+      {/* Indicadores do período */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: Receita Bruta (Destaque Escuro) */}
         <div className="bg-[#09090b] dark:bg-blue-950/60 border border-zinc-800 dark:border-blue-800/70 rounded-2xl p-5 text-white shadow-sm relative overflow-hidden">
@@ -167,10 +167,10 @@ export default function Dashboard({ empresa, onNavigate }) {
         </div>
       </div>
 
-      {/* ─── COCKPIT PRINCIPAL (GRÁFICO + TIMELINE) ───────────── */}
+      {/* Desempenho e próximos atendimentos */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-        {/* LADO ESQUERDO (7 colunas): DESEMPENHO DA EQUIPE */}
+        {/* Desempenho da equipe */}
         <div className="lg:col-span-7 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-2xl p-6 shadow-2xs flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800/80">
@@ -248,7 +248,7 @@ export default function Dashboard({ empresa, onNavigate }) {
           )}
         </div>
 
-        {/* LADO DIREITO (5 colunas): PRÓXIMOS ATENDIMENTOS EM TIMELINE */}
+        {/* Próximos atendimentos */}
         <div className="lg:col-span-5 bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 rounded-2xl p-6 shadow-2xs flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800/80">

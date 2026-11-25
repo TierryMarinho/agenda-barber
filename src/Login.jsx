@@ -33,13 +33,13 @@ export default function Login() {
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-12 bg-white dark:bg-[#09090b] font-sans">
 
-      {/* COLUNA ESQUERDA: BRANDING EXECUTIVO (Preto & Azul Noturno) */}
+      {/* Apresentação */}
       <div className="hidden lg:flex lg:col-span-7 relative overflow-hidden bg-[#09090b] text-white p-12 xl:p-16 flex-col justify-between border-r border-zinc-900">
-        {/* Glow sutil */}
+        {/* Efeito de fundo */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-blue-900/15 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Top Logo */}
+        {/* Logo */}
         <div className="relative z-10 flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/30">
             AB
@@ -49,7 +49,7 @@ export default function Login() {
           </span>
         </div>
 
-        {/* Center Pitch */}
+        {/* Apresentação do sistema */}
         <div className="relative z-10 max-w-lg space-y-6 my-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-zinc-300">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
@@ -62,7 +62,7 @@ export default function Login() {
             Sincronização em tempo real com WhatsApp e Google Calendar, cálculo automático de repasses e controle inteligente de horários sem poluição visual.
           </p>
 
-          {/* Mini Preview Cards */}
+          {/* Prévia do painel */}
           <div className="grid grid-cols-3 gap-3 pt-4">
             <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/80">
               <p className="text-[11px] text-zinc-400 font-medium">Agendamentos IA</p>
@@ -79,7 +79,7 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Rodapé */}
         <div className="relative z-10 flex items-center justify-between text-xs text-zinc-500">
           <span>Agenda Barber &copy; {new Date().getFullYear()}</span>
           <span>Arquitetura Multi-Tenant Segura</span>
@@ -90,7 +90,7 @@ export default function Login() {
       <div className="lg:col-span-5 flex flex-col justify-center items-center p-6 sm:p-12 bg-[#fafafa] dark:bg-[#09090b]">
         <div className="w-full max-w-sm space-y-7">
 
-          {/* Mobile Logo */}
+          {/* Logo em telas pequenas */}
           <div className="flex lg:hidden items-center gap-2.5 mb-2">
             <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-sm">
               AB

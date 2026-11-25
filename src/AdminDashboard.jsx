@@ -239,12 +239,12 @@ export default function AdminDashboard({ empresa, usuario }) {
         />
       )}
 
-      {/* SIDEBAR EXECUTIVA (#09090b) */}
+      {/* Menu lateral */}
       <aside className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-[#09090b] text-zinc-300 border-r border-zinc-800/80 flex flex-col justify-between transition-transform duration-200 ease-out ${
         mobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
         <div>
-          {/* TOPO: BRAND + WORKSPACE */}
+          {/* Identificação do sistema */}
           <div className="h-16 px-5 flex items-center justify-between border-b border-zinc-800/80">
             <div className="flex items-center gap-3 min-w-0">
               <div className="w-8 h-8 rounded-lg bg-blue-700 flex items-center justify-center text-white font-bold text-sm shadow-sm shadow-blue-950 shrink-0">

@@ -1,8 +1,8 @@
 # Agenda Barber
 
-Frontend de um sistema de agendamentos para barbearias, desenvolvido com React,
-JavaScript e Vite. O painel permite consultar a agenda e administrar os cadastros
-conforme as permissões da conta autenticada.
+Sistema de agendamentos para barbearias com painel em React, JavaScript e Vite
+e atendimento pelo WhatsApp com n8n. O painel permite consultar a agenda e
+administrar os cadastros conforme as permissões da conta autenticada.
 
 ## Tecnologias
 
@@ -12,6 +12,7 @@ conforme as permissões da conta autenticada.
 - Supabase Auth e PostgreSQL para autenticação e persistência.
 - React Big Calendar e Moment para a agenda.
 - Recharts para os gráficos administrativos.
+- n8n, OpenAI e Evolution API para o atendimento e agendamento pelo WhatsApp.
 
 ## Executar localmente
 
@@ -52,25 +53,32 @@ npm run preview  # visualiza o build local
 npm run lint     # análise estática; pode apontar pendências existentes
 ```
 
-## Escopo desta cópia
+## Automação pelo WhatsApp
 
-Este repositório contém somente o frontend. A infraestrutura, o banco e seu schema,
-as migrations, os workflows do n8n, o Spec Kit, as instruções internas dos agentes,
-as credenciais e o histórico do repositório de desenvolvimento não são incluídos.
-O banco não é criado automaticamente por esta cópia; é necessário um ambiente
-compatível previamente configurado, incluindo as tabelas e regras de acesso.
+O workflow está em
+[`automacoes/n8n/agendamento-whatsapp.json`](automacoes/n8n/agendamento-whatsapp.json).
+As etapas de importação, configuração das credenciais e teste estão no
+[guia da automação](automacoes/n8n/README.md).
 
-A automação de agendamento por WhatsApp do projeto completo é executada em um
-ambiente separado, com n8n, OpenAI e Evolution API. Importar este frontend não
-instala ou publica essa automação. Algumas telas e integrações adicionais dependem
-desses serviços e de endpoints externos; sua presença no código não garante que
-funcionem em um novo ambiente.
+O assistente consulta profissionais e horários no banco e registra os detalhes
+escolhidos pelo cliente. A confirmação por uma nova mensagem é processada pela
+função do banco, que grava o agendamento e retorna a resposta ao WhatsApp.
+
+## Serviços necessários
+
+O repositório contém o painel e o workflow de automação. A infraestrutura,
+as credenciais e o schema do banco não estão incluídos. É necessário um Supabase
+compatível previamente configurado, com suas tabelas, regras de acesso e funções.
+Importar o workflow não cria essas funções nem instala n8n ou Evolution API.
+
+Algumas telas e integrações adicionais dependem de endpoints externos; sua
+presença no código não garante que funcionem em um novo ambiente.
 
 Duplicar o código não duplica o banco. Se forem configuradas as mesmas variáveis
 de conexão, esta cópia acessará o mesmo Supabase, sujeita às permissões da conta.
 
 ## Uso acadêmico
 
-O código é disponibilizado para consulta técnica do frontend. Para demonstrar o
-agendamento completo, use também as evidências de execução e a gravação da aplicação.
+O código é disponibilizado para consulta técnica do painel e da automação. Para
+demonstrar o agendamento completo, use também as evidências de execução e a gravação da aplicação.
 Não publique dados de clientes ou credenciais junto ao código.

@@ -228,7 +228,7 @@ export default function SuperAdminDashboard() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans">
 
-      {/* HEADER CLEAN */}
+      {/* Cabeçalho */}
       <header className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -254,10 +254,10 @@ export default function SuperAdminDashboard() {
         </div>
       </header>
 
-      {/* CONTEÚDO */}
+      {/* Conteúdo */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
-        {/* CARDS */}
+        {/* Indicadores */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             { label: 'Empresas Ativas',  valor: estatisticas.totalEmpresas },
@@ -271,7 +271,7 @@ export default function SuperAdminDashboard() {
           ))}
         </div>
 
-        {/* TABELA */}
+        {/* Tabela */}
         <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-xs">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
             <div>
@@ -350,7 +350,7 @@ export default function SuperAdminDashboard() {
         </div>
       </main>
 
-      {/* ── MODAL: NOVO CLIENTE ──────────────────────────────────────────────── */}
+      {/* MODAL: NOVO CLIENTE */}
       {modalNovoCliente && (
         <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6 shadow-xl">
@@ -389,7 +389,7 @@ export default function SuperAdminDashboard() {
         </div>
       )}
 
-      {/* ── MODAL: EDITAR EMPRESA ────────────────────────────────────────────── */}
+      {/* MODAL: EDITAR EMPRESA */}
       {modalEditar.isOpen && (
         <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto p-6 shadow-xl">
@@ -448,7 +448,7 @@ export default function SuperAdminDashboard() {
         </div>
       )}
 
-      {/* ── MODAL: VER EMPRESA ──────────────────────────────────────────────── */}
+      {/* MODAL: VER EMPRESA */}
       {modalVer.isOpen && (
         <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl w-full max-w-xl max-h-[90vh] overflow-y-auto p-6 shadow-xl">

@@ -564,7 +564,7 @@ export default function Configuracoes({ empresa }) {
         })}
       </div>
 
-      {/* ─── ABA 1: ESTABELECIMENTO & REGRAS ─────────────────────────────── */}
+      {/* ABA 1: ESTABELECIMENTO & REGRAS */}
       {secaoAtiva === 'estabelecimento' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fade-in">
           {/* Dados Gerais */}
@@ -654,7 +654,7 @@ export default function Configuracoes({ empresa }) {
         </div>
       )}
 
-      {/* ─── ABA 2: EQUIPE & CATÁLOGO DE SERVIÇOS ────────────────────────── */}
+      {/* ABA 2: EQUIPE & CATÁLOGO DE SERVIÇOS */}
       {secaoAtiva === 'catalogo' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in">
           {/* Equipe */}
@@ -774,7 +774,7 @@ export default function Configuracoes({ empresa }) {
         </div>
       )}
 
-      {/* ─── ABA 3: USUÁRIOS E PERMISSÕES ────────────────────────────────── */}
+      {/* ABA 3: USUÁRIOS E PERMISSÕES */}
       {secaoAtiva === 'usuarios' && (
         <div className={`${cardCls} animate-fade-in`}>
           <div className="pb-4 border-b border-zinc-100 dark:border-zinc-800 mb-5">
@@ -866,7 +866,7 @@ export default function Configuracoes({ empresa }) {
         </div>
       )}
 
-      {/* ─── ABA 4: INTEGRAÇÕES & SEGURANÇA ──────────────────────────────── */}
+      {/* ABA 4: INTEGRAÇÕES & SEGURANÇA */}
       {secaoAtiva === 'integracoes' && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in">
           <div className={cardCls}>
